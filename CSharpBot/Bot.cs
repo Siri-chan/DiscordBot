@@ -1,4 +1,5 @@
-﻿using DSharpPlus;
+﻿using CSharpBot.Commands;
+using DSharpPlus;
 using DSharpPlus.CommandsNext;
 using DSharpPlus.EventArgs;
 using Newtonsoft.Json;
@@ -38,8 +39,10 @@ namespace CSharpBot
                 StringPrefixes = new string[] { configJson.Prefix },
                 EnableMentionPrefix = true,
                 EnableDms = false,
+                IgnoreExtraArguments = true,
             };
             Commands = Client.UseCommandsNext(commandsConfig);
+            Commands.RegisterCommands<commands>();
             await Client.ConnectAsync();
             await Task.Delay(-1);
         }
