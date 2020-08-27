@@ -4,6 +4,6 @@ For this to work you need to create a file titled config.json in `/bin/Debug/net
 ```
 {
 	"token": "<insert here>",
-	"prefix": "q"
+	"prefix": "<insert here>",
 }
 ```
