@@ -11,9 +11,17 @@ namespace CSharpBot.Commands
     {
         [Command("credits")]
         [Description("returns information about the bot.")]
-        public async Task Credits(CommandContext ctx)
+        public async Task Credits(CommandContext ctx, [Description("1: General Credits; 2: Source Code")] int page)
         {
-            await ctx.Channel.SendMessageAsync("Written in C# using the DSharpPlus Libraries, by Siri.").ConfigureAwait(false);
+            string[] content = { "Written in C# using the DSharpPlus Libraries, by Siri.", "Source Code available at https://github.com/Siri-chan/DiscordBotTest (link may be subject to change)" };
+            if (page == 1 || page == 2)
+            {
+                await ctx.Channel.SendMessageAsync(content[page - 1]).ConfigureAwait(false);
+            }
+            else
+            {
+                await ctx.Channel.SendMessageAsync("Please type the command with a valid page number; eg. `qcredits 1`").ConfigureAwait(false);
+            }
         }
         [Command("add")]
         [Description("Adds 2 Numbers Together")]
