@@ -37,6 +37,7 @@ namespace CSharpBot.Commands
             int diceRoll = 0;
             diceRoll = rnd.Next(1, max + 1);
             await ctx.Channel.SendMessageAsync((diceRoll).ToString()).ConfigureAwait(false);
+            // limit is roughly 2125000000
         }
         [Command("gamer")]
         [Description("[CONTENT REDACTED]")]
@@ -44,6 +45,25 @@ namespace CSharpBot.Commands
         {
             await ctx.Member.SendMessageAsync("https://drive.google.com/drive/folders/1wf-q6U0_k6IDGD3nEqVQQOOyUZ9GtPtp").ConfigureAwait(false);
         }
+        /*        [Command("timezone")]
+                [Description("Gathers a location's timezone based on `longitude`")]
+                public async Task Roll(CommandContext ctx, [Description("The location's longitude.")] float longitude)
+                {
+                    int timezone = 0;
+                    if (longitude > 180 || longitude < -180)
+                    {
+
+                    }
+                    else
+                    {
+                        if (longitude = longitude)
+                        {
+                            await ctx.Channel.SendMessageAsync("Latitude: " + longitude).ConfigureAwait(false);
+                            await ctx.Channel.SendMessageAsync("Timezone: GMT+" + timezone).ConfigureAwait(false);
+                            // Will finish *later* once i bother to copy+paste longitude if loops and counteract for Daylight Savings, weird jaggedy timezone edges
+                        }
+                    }
+                }*/
     }
 }
 
