@@ -14,7 +14,7 @@ namespace CSharpBot.Commands
         public async Task Credits(CommandContext ctx, [Description("1: General Credits; 2: Source Code")] int page)
         {
             string[] content = { "Written in C# using the DSharpPlus Libraries, by Siri.", "Source Code available at https://github.com/Siri-chan/DiscordBotTest (link may be subject to change)" };
-            if (page == 1 || page == 2)
+            if (page <= content.Length + 1 & page > 0)
             {
                 await ctx.Channel.SendMessageAsync(content[page - 1]).ConfigureAwait(false);
             }
