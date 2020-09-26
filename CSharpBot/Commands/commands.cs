@@ -45,6 +45,31 @@ namespace CSharpBot.Commands
         {
             await ctx.Member.SendMessageAsync("https://drive.google.com/drive/folders/1wf-q6U0_k6IDGD3nEqVQQOOyUZ9GtPtp").ConfigureAwait(false);
         }
+        [Command("492")]
+        [Description("This one is pretty self explanatory")]
+        public async Task gamer(CommandContext ctx, [Description("yes.")] int not492)
+        {
+            if (not492 % 492 == 0)
+            {
+                int div492 = not492 / 492;
+                if (div492 > 2)
+                {
+                    await ctx.Channel.SendMessageAsync(not492.ToString() + " is the " + div492.ToString() + "th multiple of 492.").ConfigureAwait(false);
+                }
+                else if (div492 == 2)
+                {
+                    await ctx.Channel.SendMessageAsync(not492.ToString() + " is the " + div492.ToString() + "nd multiple of 492.").ConfigureAwait(false);
+                }
+                else if (div492 == 1)
+                {
+                    await ctx.Channel.SendMessageAsync(not492.ToString() + " is the " + div492.ToString() + "st multiple of 492.").ConfigureAwait(false);
+                }
+                else
+                {
+                    await ctx.Channel.SendMessageAsync("i can't believe you didn't think i would add this stupid gag in here for if you were a smartass and put zero in").ConfigureAwait(false);
+                }
+            }
+        }
         /*        [Command("timezone")]
                 [Description("Gathers a location's timezone based on `longitude`")]
                 public async Task Roll(CommandContext ctx, [Description("The location's longitude.")] float longitude)
