@@ -1,6 +1,7 @@
 ﻿using CSharpBot.Commands;
 using DSharpPlus;
 using DSharpPlus.CommandsNext;
+using DSharpPlus.Interactivity;
 using DSharpPlus.EventArgs;
 using Newtonsoft.Json;
 using System;
@@ -34,6 +35,10 @@ namespace CSharpBot
             };
             Client = new DiscordClient(config);
             Client.Ready += OnReady;
+            Client.UseInteractivity(new InteractivityConfiguration
+            {
+                Timeout = TimeSpan.FromHours(1)
+            });
             var commandsConfig = new CommandsNextConfiguration
             {
                 StringPrefixes = new string[] { configJson.Prefix },

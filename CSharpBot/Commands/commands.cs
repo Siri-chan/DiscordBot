@@ -1,5 +1,7 @@
 ﻿using DSharpPlus.CommandsNext;
 using DSharpPlus.CommandsNext.Attributes;
+using DSharpPlus;
+using DSharpPlus.Interactivity;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -47,7 +49,7 @@ namespace CSharpBot.Commands
         }
         [Command("492")]
         [Description("This one is pretty self explanatory")]
-        public async Task gamer(CommandContext ctx, [Description("yes.")] int not492)
+        public async Task fourHundredAndNinetyTwo(CommandContext ctx, [Description("yes.")] int not492)
         {
             if (not492 % 492 == 0)
             {
@@ -89,6 +91,24 @@ namespace CSharpBot.Commands
                         }
                     }
                 }*/
+        [Command("repeat")]
+        [Description("Repeats the channel's next message back")]
+        public async Task repeat(CommandContext ctx)
+        {
+            var interactivity = ctx.Client.GetInteractivity();
+            await ctx.Channel.SendMessageAsync("{awaiting message}").ConfigureAwait(false);
+            var message = await interactivity.WaitForMessageAsync(x => x.Channel == ctx.Channel).ConfigureAwait(false);
+            await ctx.Channel.SendMessageAsync(message.Result.Content).ConfigureAwait(false);
+        }
+        [Command("repeatemoji")]
+        [Description("Repeats the channel's next emoji back")]
+        public async Task repeatEmoji(CommandContext ctx)
+        {
+            var interactivity = ctx.Client.GetInteractivity();
+            await ctx.Channel.SendMessageAsync("{awaiting reaction}").ConfigureAwait(false);
+            var message = await interactivity.WaitForReactionAsync(x => x.Channel == ctx.Channel && x.User == ctx.User).ConfigureAwait(false);
+            await ctx.Channel.SendMessageAsync(message.Result.Emoji).ConfigureAwait(false);
+        }
     }
 }
 

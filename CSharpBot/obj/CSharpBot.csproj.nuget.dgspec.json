@@ -39,6 +39,10 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "CessumCorePlus.Interactivity": {
+              "target": "Package",
+              "version": "[1.0.1, )"
+            },
             "DSharpPlus": {
               "target": "Package",
               "version": "[3.2.3, )"

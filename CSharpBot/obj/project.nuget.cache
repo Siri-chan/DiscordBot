@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "9Lf97yk2582V7bqkqMOydt6W0XRo6Aljuf/Hd536EKMXNgqNVZuTwFM2zTkRJzG34x5UvOOF7Ng9pvyJG3Haxw==",
+  "dgSpecHash": "TkabMBN0wAJJ5Oh+MWGNN7PiddeY0nRHf4+6DZKR6Us6K9l0XnuSUNBOFH09Aff+329YL0Wb/xEfkSWFeM1hrQ==",
   "success": true,
   "projectFilePath": "E:\\Github\\Discord\\DiscordBotTest\\CSharpBot\\CSharpBot.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\a_bad\\.nuget\\packages\\cessumcoreplus\\1.0.1\\cessumcoreplus.1.0.1.nupkg.sha512",
+    "C:\\Users\\a_bad\\.nuget\\packages\\cessumcoreplus.interactivity\\1.0.1\\cessumcoreplus.interactivity.1.0.1.nupkg.sha512",
     "C:\\Users\\a_bad\\.nuget\\packages\\dsharp123123\\1.0.0\\dsharp123123.1.0.0.nupkg.sha512",
     "C:\\Users\\a_bad\\.nuget\\packages\\dsharp123123.commandsnext\\1.2.0\\dsharp123123.commandsnext.1.2.0.nupkg.sha512",
     "C:\\Users\\a_bad\\.nuget\\packages\\dsharpplus\\3.2.3\\dsharpplus.3.2.3.nupkg.sha512",

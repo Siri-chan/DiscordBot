@@ -2,6 +2,35 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
+      "CessumCorePlus/1.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.3",
+          "System.Memory": "4.5.3",
+          "System.Net.Http": "4.3.4",
+          "System.Net.WebSockets": "4.3.0",
+          "System.Net.WebSockets.Client": "4.3.2",
+          "System.Runtime.InteropServices.RuntimeInformation": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/DSharpPlus.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/DSharpPlus.dll": {}
+        }
+      },
+      "CessumCorePlus.Interactivity/1.0.1": {
+        "type": "package",
+        "dependencies": {
+          "CessumCorePlus": "1.0.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/DSharpPlus.Interactivity.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/DSharpPlus.Interactivity.dll": {}
+        }
+      },
       "dsharp123123/1.0.0": {
         "type": "package",
         "dependencies": {
@@ -1198,6 +1227,38 @@
     }
   },
   "libraries": {
+    "CessumCorePlus/1.0.1": {
+      "sha512": "hQLzcM4qAZJ8tBFOElzq99UcqdihGVf+fFgf9D7Qe2yafqqgbOYXlcSCrjVbPvwmwfCPLdWfmHre63b+vuwvFA==",
+      "type": "package",
+      "path": "cessumcoreplus/1.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "PackageLogo.jpg",
+        "cessumcoreplus.1.0.1.nupkg.sha512",
+        "cessumcoreplus.nuspec",
+        "lib/netstandard1.3/DSharpPlus.dll",
+        "lib/netstandard1.3/DSharpPlus.xml",
+        "lib/netstandard2.0/DSharpPlus.dll",
+        "lib/netstandard2.0/DSharpPlus.xml"
+      ]
+    },
+    "CessumCorePlus.Interactivity/1.0.1": {
+      "sha512": "h0A/3Lj9IgPME2dY6lJn/oJ7JgKcGf6wA1E0LdMz4ynVu70HbXWJmmxG9MeMmkYzOijyjLGXPeeVXHW8yTumvg==",
+      "type": "package",
+      "path": "cessumcoreplus.interactivity/1.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "PackageLogo.jpg",
+        "cessumcoreplus.interactivity.1.0.1.nupkg.sha512",
+        "cessumcoreplus.interactivity.nuspec",
+        "lib/netstandard1.3/DSharpPlus.Interactivity.dll",
+        "lib/netstandard1.3/DSharpPlus.Interactivity.xml",
+        "lib/netstandard2.0/DSharpPlus.Interactivity.dll",
+        "lib/netstandard2.0/DSharpPlus.Interactivity.xml"
+      ]
+    },
     "dsharp123123/1.0.0": {
       "sha512": "jmJyy5FY2Kge6xuTJNpgAJGvX0bAESBXwP91kvV+pDWsW/cecakVTJ2z8tGJ306KATdJS+yMJrtUB9U5OPDxow==",
       "type": "package",
@@ -4111,6 +4172,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "CessumCorePlus.Interactivity >= 1.0.1",
       "DSharpPlus >= 3.2.3",
       "DSharpPlus.CommandsNext >= 3.2.3",
       "DSharpPlus.Interactivity >= 3.2.3",
@@ -4155,6 +4217,10 @@
     "frameworks": {
       "netcoreapp3.1": {
         "dependencies": {
+          "CessumCorePlus.Interactivity": {
+            "target": "Package",
+            "version": "[1.0.1, )"
+          },
           "DSharpPlus": {
             "target": "Package",
             "version": "[3.2.3, )"
