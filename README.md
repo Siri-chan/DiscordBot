@@ -1,5 +1,5 @@
-# DiscordBotTest
-A simple test bot program written in c# with dsharpplus. 
+# DiscordBot  
+A simple test bot program written in C# with DSharpPlus. 
 ## Setup
 For this to work you need to create a file titled config.json in `/bin/Debug/netcoreapp3.x` that reads 
 ```
