@@ -34,7 +34,7 @@ Then, compile it with Microsoft .NET.
 		Output: `15`   
 		
 ### qgamer  
-**[CONTENT REDACTED]
+**[CONTENT REDACTED]**
 		  
 
 		  
