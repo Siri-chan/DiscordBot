@@ -63,7 +63,7 @@ _qtimezone is an unfinished command, fully commented out in the code_
 **Class:** `repeatEmoji`
 **Example:** Input: `qrepeatemoji`  
 			Output: `{awaiting reaction}`  
-			Input: _User reacts to the bot's message with :ok_hand:`_  
+			Input: *User reacts to the bot's message with :ok_hand:*  
 			Output: `:ok_hand:`  
 
 ### qfizzbuzz  
