@@ -73,7 +73,7 @@ namespace CSharpBot.Commands
             }
             else
             {
-                await ctx.Channel.SendMessageAsync("This number is not divisible by 492, and it leaves a remainder of " + not492 % 492).ConfigureAwait(false);
+                await ctx.Channel.SendMessageAsync(not492.ToString() + " is not divisible by 492, and it leaves a remainder of " + not492 % 492).ConfigureAwait(false);
             }
         }
         /*        [Command("timezone")]
